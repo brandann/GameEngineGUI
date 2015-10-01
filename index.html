@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Menu Practice</title>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: verdana;
+            background-color: #ABC;
+            padding: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #009;
+            margin-bottom: 20px;
+        }
+
+        /* rules for navigation */
+
+        ul#navmenu, ul.sub1, ul.sub2 {
+            list-style-type: none;
+            font-size: 12px;
+        }
+
+        ul#navmenu li{
+
+            width: 125px;
+            text-align: center;
+            position: relative;
+            float: left;
+            margin-right: 6px;
+        }
+
+        ul#navmenu a {
+            text-decoration: none;
+            display: block;
+            width: 125px;
+            height: 25px;
+            line-height: 25px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul#navmenu .sub1 a{
+            margin-top: 5px;
+        }
+
+        ul#navmenu .sub1 li {
+        }
+
+        ul#navmenu .sub2 a{
+            margin-left: 10px;
+        }
+
+        ul#navmenu li:hover > a {
+            background-color: #CFC;
+        }
+
+        ul#navmenu li:hover a:hover {
+            background-color: #FF0;
+        }
+
+        ul#navmenu ul.sub1 {
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: 0px;
+        }
+
+        ul#navmenu ul.sub2 {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 121px;
+        }
+
+        ul#navmenu li:hover .sub1 {
+            display: block;
+        }
+
+        ul#navmenu .sub1 li:hover .sub2 {
+            display: block;
+        }
+
+        .downarrow {
+            font-size: 12px;
+            position: absolute;
+            top: 5px;
+            right: 4px;
+        }
+
+        .rightarrow {
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            right: 4px;
+        }
+
+        #tedimage {
+            position: fixed;
+            top: 25%;
+            left: 25%;
+        }
+    </style>
+</head>
+    <body>
+        <!-- navigation menu -->
+        <ul id="navmenu">
+            <li><a href="#">File</a></li>
+            <li><a href="#">link1</a><span class="downarrow">&#9660;</span>
+                <ul class="sub1">
+                    <li><a href="#">link1.1</a></li>
+                    <li><a href="#">link1.2</a></li>
+                    <li><a href="#">link1.3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">hyperlink 3</a></li>
+            <li><a href="#">GameObject</a><span class="downarrow">&#9660;</span>
+                <ul class="sub1">
+                    <li><a href="#">Square</a></li>
+                    <li><a href="#">Circle</a></li>
+                    <li><a href="#">UI</a><span class="rightarrow">&#9654;</span>
+                        <ul class="sub2">
+                            <li><a href="#">Button</a></li>
+                            <li><a href="#">Text</a></li>
+                            <li><a href="#">hyperlink 4.3.3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Stop The Cat!</a></li>
+        </ul>
+
+        <img src="https://31.media.tumblr.com/a9bf31014b1f2c01955f23135f20b47a/tumblr_mugvrmLywP1qkjrhio1_500.gif" id="tedimage">
+    </body>
+</html>
+
+<!----------    JQUERY     ------------>
+<script src="bower_components\jquery\jquery.js"></script>
+<script>
+    $(document).ready(function() {
+
+    })
+</script>
